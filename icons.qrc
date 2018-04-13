@@ -1,0 +1,72 @@
+<RCC>
+    <qresource prefix="/File">
+        <file>images/body part.png</file>
+        <file>images/Bottom view.png</file>
+        <file>images/color.png</file>
+        <file>images/Cone.png</file>
+        <file>images/copy.png</file>
+        <file>images/crack.png</file>
+        <file>images/cuboid.png</file>
+        <file>images/Cutting.png</file>
+        <file>images/Cylinder.png</file>
+        <file>images/delete.png</file>
+        <file>images/Drag.png</file>
+        <file>images/Draw boundary.png</file>
+        <file>images/drilling.png</file>
+        <file>images/Ellipsoid.png</file>
+        <file>images/enlarge.png</file>
+        <file>images/exit.png</file>
+        <file>images/extend.png</file>
+        <file>images/further.png</file>
+        <file>images/Generate contours.png</file>
+        <file>images/Geological model.png</file>
+        <file>images/Hide Show.png</file>
+        <file>images/index.png</file>
+        <file>images/layer.png</file>
+        <file>images/Light control.png</file>
+        <file>images/line.png</file>
+        <file>images/Logs.png</file>
+        <file>images/merge.png</file>
+        <file>images/move.png</file>
+        <file>images/Narrow.png</file>
+        <file>images/new.png</file>
+        <file>images/North view.png</file>
+        <file>images/Online Help.png</file>
+        <file>images/open.png</file>
+        <file>images/Outsourcing box.png</file>
+        <file>images/panoramic.png</file>
+        <file>images/Parallel projection.png</file>
+        <file>images/Perforation.png</file>
+        <file>images/Perspective projection.png</file>
+        <file>images/perspective.png</file>
+        <file>images/Pick up.png</file>
+        <file>images/Plan view.png</file>
+        <file>images/point.png</file>
+        <file>images/profile.png</file>
+        <file>images/Property superposition.png</file>
+        <file>images/reduction.png</file>
+        <file>images/Reservoir Simulation.png</file>
+        <file>images/Revocation.png</file>
+        <file>images/Ring.png</file>
+        <file>images/Save as.png</file>
+        <file>images/save.png</file>
+        <file>images/select.png</file>
+        <file>images/Sphere.png</file>
+        <file>images/Staff.png</file>
+        <file>images/straight line.png</file>
+        <file>images/Stratified.png</file>
+        <file>images/Structural map.png</file>
+        <file>images/surface.png</file>
+        <file>images/table of Contents.png</file>
+        <file>images/text editor.png</file>
+        <file>images/Thematic map.png</file>
+        <file>images/Unselected.png</file>
+        <file>images/well deviation.png</file>
+        <file>images/Well trajectory.png</file>
+        <file>images/Wellhead.png</file>
+        <file>images/whirl（alone）.png</file>
+        <file>images/whirl.png</file>
+        <file>images/XYZ.png</file>
+        <file>images/Yuantong.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,1182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>889</width>
+    <height>574</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>油藏数据三维可视化平台</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="TreeView" name="treeView">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>170</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>170</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="contextMenuPolicy">
+         <enum>Qt::CustomContextMenu</enum>
+        </property>
+        <property name="autoFillBackground">
+         <bool>true</bool>
+        </property>
+        <property name="verticalScrollBarPolicy">
+         <enum>Qt::ScrollBarAsNeeded</enum>
+        </property>
+        <property name="horizontalScrollBarPolicy">
+         <enum>Qt::ScrollBarAsNeeded</enum>
+        </property>
+        <property name="sizeAdjustPolicy">
+         <enum>QAbstractScrollArea::AdjustToContents</enum>
+        </property>
+        <property name="autoScroll">
+         <bool>true</bool>
+        </property>
+        <property name="autoScrollMargin">
+         <number>16</number>
+        </property>
+        <property name="alternatingRowColors">
+         <bool>true</bool>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>16</width>
+          <height>16</height>
+         </size>
+        </property>
+        <property name="autoExpandDelay">
+         <number>-1</number>
+        </property>
+        <property name="uniformRowHeights">
+         <bool>true</bool>
+        </property>
+        <property name="animated">
+         <bool>true</bool>
+        </property>
+        <property name="headerHidden">
+         <bool>true</bool>
+        </property>
+        <attribute name="headerVisible">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="headerCascadingSectionResizes">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="headerHighlightSections">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="headerShowSortIndicator" stdset="0">
+         <bool>false</bool>
+        </attribute>
+       </widget>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="GraphicsView" name="graphicsView">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="contextMenuPolicy">
+           <enum>Qt::CustomContextMenu</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGraphicsView" name="graphicsView_Bottom">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>100</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>100</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_6">
+        <item>
+         <widget class="QGraphicsView" name="graphicsView_RTop">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>170</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>170</width>
+            <height>16777215</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGraphicsView" name="graphicsView_RBottom">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>170</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>170</width>
+            <height>16777215</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>889</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>编辑(E)</string>
+    </property>
+    <widget class="QMenu" name="menu_5">
+     <property name="title">
+      <string>选择</string>
+     </property>
+     <widget class="QMenu" name="menu_10">
+      <property name="title">
+       <string>旋转</string>
+      </property>
+      <addaction name="whirl_alone"/>
+      <addaction name="whirl"/>
+     </widget>
+     <addaction name="Pick_up"/>
+     <addaction name="Drag"/>
+     <addaction name="menu_10"/>
+     <addaction name="extend"/>
+     <addaction name="Unselected"/>
+    </widget>
+    <addaction name="Revocation"/>
+    <addaction name="Restore"/>
+    <addaction name="reduction"/>
+    <addaction name="menu_5"/>
+    <addaction name="merge"/>
+    <addaction name="delete_2"/>
+    <addaction name="copy"/>
+    <addaction name="Cutting"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>三维可视化(V)</string>
+    </property>
+    <widget class="QMenu" name="menu_6">
+     <property name="title">
+      <string>场景显示</string>
+     </property>
+     <addaction name="panoramic"/>
+     <addaction name="Plan_view"/>
+     <addaction name="Bottom_view"/>
+     <addaction name="North_view"/>
+     <addaction name="Parallel_projection"/>
+     <addaction name="Perspective_projection"/>
+    </widget>
+    <widget class="QMenu" name="menu_7">
+     <property name="title">
+      <string>缩放</string>
+     </property>
+     <addaction name="enlarge"/>
+     <addaction name="Narrow"/>
+    </widget>
+    <addaction name="Property_superposition"/>
+    <addaction name="menu_6"/>
+    <addaction name="menu_7"/>
+    <addaction name="Outsourcing_box"/>
+    <addaction name="XYZ"/>
+    <addaction name="Staff"/>
+    <addaction name="color"/>
+    <addaction name="Hide_Show"/>
+    <addaction name="move"/>
+    <addaction name="Light_control"/>
+   </widget>
+   <widget class="QMenu" name="menu_4">
+    <property name="title">
+     <string>帮助(M)</string>
+    </property>
+    <addaction name="table_of_Contents"/>
+    <addaction name="Index"/>
+    <addaction name="Online_Help"/>
+   </widget>
+   <widget class="QMenu" name="menu_T">
+    <property name="title">
+     <string>工具栏(T)</string>
+    </property>
+    <addaction name="straight_line"/>
+    <addaction name="text_editor"/>
+    <addaction name="Draw_boundary"/>
+    <addaction name="Generate_contours"/>
+    <addaction name="layer"/>
+    <addaction name="AssistantView"/>
+   </widget>
+   <widget class="QMenu" name="menu_R">
+    <property name="title">
+     <string>资源(R)</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_D">
+    <property name="title">
+     <string>数据(D)</string>
+    </property>
+    <widget class="QMenu" name="menu_8">
+     <property name="title">
+      <string>单井</string>
+     </property>
+     <addaction name="Wellhead"/>
+     <addaction name="well_deviation"/>
+     <addaction name="Well_trajectory"/>
+     <addaction name="Logs"/>
+     <addaction name="Perforation"/>
+     <addaction name="Stratified"/>
+    </widget>
+    <addaction name="menu_8"/>
+    <addaction name="Reservoir_Simulation"/>
+    <addaction name="Geological_model"/>
+    <addaction name="crack"/>
+    <addaction name="drilling"/>
+    <addaction name="profile"/>
+    <addaction name="Structural_map"/>
+    <addaction name="Thematic_map"/>
+    <addaction name="point"/>
+    <addaction name="line"/>
+    <addaction name="surface"/>
+    <addaction name="body_part"/>
+   </widget>
+   <widget class="QMenu" name="menu_11">
+    <property name="title">
+     <string>基本几何体(G)</string>
+    </property>
+    <addaction name="Sphere"/>
+    <addaction name="cuboid"/>
+    <addaction name="Ellipsoid"/>
+    <addaction name="Cone"/>
+    <addaction name="Cylinder"/>
+    <addaction name="Yuantong"/>
+    <addaction name="Ring"/>
+   </widget>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>文件(F)</string>
+    </property>
+    <addaction name="createProject"/>
+    <addaction name="openProject"/>
+    <addaction name="saveProject"/>
+    <addaction name="saveProjectAS"/>
+    <addaction name="closeProject"/>
+    <addaction name="separator"/>
+    <addaction name="quit"/>
+   </widget>
+   <widget class="QMenu" name="menu_12">
+    <property name="title">
+     <string>加载数据</string>
+    </property>
+    <addaction name="loadStrataSurface"/>
+    <addaction name="loadFault"/>
+    <addaction name="loadWell"/>
+    <addaction name="separator"/>
+    <addaction name="loadSModel"/>
+    <addaction name="loadVModel"/>
+    <addaction name="separator"/>
+    <addaction name="loadExplorationResult"/>
+    <addaction name="loadProfile"/>
+    <addaction name="loadCompositeColumn"/>
+   </widget>
+   <widget class="QMenu" name="menu_P">
+    <property name="title">
+     <string>坐标计算(P)</string>
+    </property>
+    <addaction name="ExplorationResultDataTransForm"/>
+    <addaction name="ProfileDataTransform"/>
+    <addaction name="SinglewellDataTransform"/>
+    <addaction name="DataTransform"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_12"/>
+   <addaction name="menu_D"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_11"/>
+   <addaction name="menu_3"/>
+   <addaction name="menu_T"/>
+   <addaction name="menu_R"/>
+   <addaction name="menu_4"/>
+   <addaction name="menu_P"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="createProject"/>
+   <addaction name="openProject"/>
+   <addaction name="closeProject"/>
+   <addaction name="separator"/>
+   <addaction name="Restore"/>
+   <addaction name="Revocation"/>
+   <addaction name="copy"/>
+   <addaction name="saveProject"/>
+   <addaction name="delete_2"/>
+   <addaction name="saveProjectAs"/>
+   <addaction name="enlarge"/>
+   <addaction name="Narrow"/>
+   <addaction name="separator"/>
+   <addaction name="table_of_Contents"/>
+   <addaction name="Index"/>
+   <addaction name="Online_Help"/>
+   <addaction name="separator"/>
+   <addaction name="Structural_map"/>
+   <addaction name="Thematic_map"/>
+   <addaction name="Wellhead"/>
+   <addaction name="Well_trajectory"/>
+   <addaction name="Logs"/>
+   <addaction name="Stratified"/>
+   <addaction name="Reservoir_Simulation"/>
+   <addaction name="Geological_model"/>
+   <addaction name="crack"/>
+   <addaction name="point"/>
+   <addaction name="line"/>
+   <addaction name="straight_line"/>
+   <addaction name="surface"/>
+   <addaction name="body_part"/>
+   <addaction name="separator"/>
+   <addaction name="Sphere"/>
+   <addaction name="cuboid"/>
+   <addaction name="Ellipsoid"/>
+   <addaction name="Cone"/>
+   <addaction name="Cylinder"/>
+   <addaction name="Yuantong"/>
+   <addaction name="Ring"/>
+   <addaction name="text_editor"/>
+   <addaction name="Draw_boundary"/>
+   <addaction name="Generate_contours"/>
+   <addaction name="layer"/>
+   <addaction name="Pick_up"/>
+   <addaction name="Drag"/>
+   <addaction name="merge"/>
+   <addaction name="Property_superposition"/>
+   <addaction name="Cutting"/>
+   <addaction name="whirl"/>
+   <addaction name="whirl_alone"/>
+   <addaction name="Staff"/>
+   <addaction name="XYZ"/>
+   <addaction name="Outsourcing_box"/>
+   <addaction name="Unselected"/>
+   <addaction name="reduction"/>
+   <addaction name="extend"/>
+   <addaction name="panoramic"/>
+   <addaction name="North_view"/>
+   <addaction name="Plan_view"/>
+   <addaction name="Bottom_view"/>
+   <addaction name="Light_control"/>
+   <addaction name="drilling"/>
+   <addaction name="profile"/>
+   <addaction name="Parallel_projection"/>
+   <addaction name="Perspective_projection"/>
+   <addaction name="color"/>
+   <addaction name="Hide_Show"/>
+   <addaction name="move"/>
+  </widget>
+  <action name="createProject">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/new.png</normaloff>:/File/images/new.png</iconset>
+   </property>
+   <property name="text">
+    <string>新建工程(N)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="openProject">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/open.png</normaloff>:/File/images/open.png</iconset>
+   </property>
+   <property name="text">
+    <string>打开工程(O)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="closeProject">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/exit.png</normaloff>:/File/images/exit.png</iconset>
+   </property>
+   <property name="text">
+    <string>关闭工程(C)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="Revocation">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/further.png</normaloff>:/File/images/further.png</iconset>
+   </property>
+   <property name="text">
+    <string>前进一步(W)</string>
+   </property>
+  </action>
+  <action name="Restore">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/Revocation.png</normaloff>:/File/images/Revocation.png</iconset>
+   </property>
+   <property name="text">
+    <string>后退一步(K)</string>
+   </property>
+  </action>
+  <action name="table_of_Contents">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/table of Contents.png</normaloff>:/File/images/table of Contents.png</iconset>
+   </property>
+   <property name="text">
+    <string>目录table of Contents</string>
+   </property>
+  </action>
+  <action name="Index">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/index.png</normaloff>:/File/images/index.png</iconset>
+   </property>
+   <property name="text">
+    <string>索引index</string>
+   </property>
+  </action>
+  <action name="Online_Help">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/Online Help.png</normaloff>:/File/images/Online Help.png</iconset>
+   </property>
+   <property name="text">
+    <string>联机帮助Online Help</string>
+   </property>
+  </action>
+  <action name="Pick_up">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/Pick up.png</normaloff>:/File/images/Pick up.png</iconset>
+   </property>
+   <property name="text">
+    <string>拾取</string>
+   </property>
+  </action>
+  <action name="Drag">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/Drag.png</normaloff>:/File/images/Drag.png</iconset>
+   </property>
+   <property name="text">
+    <string>拖拽</string>
+   </property>
+  </action>
+  <action name="extend">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/extend.png</normaloff>:/File/images/extend.png</iconset>
+   </property>
+   <property name="text">
+    <string>延展</string>
+   </property>
+  </action>
+  <action name="merge">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/merge.png</normaloff>:/File/images/merge.png</iconset>
+   </property>
+   <property name="text">
+    <string>合并</string>
+   </property>
+  </action>
+  <action name="delete_2">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/delete.png</normaloff>:/File/images/delete.png</iconset>
+   </property>
+   <property name="text">
+    <string>删除</string>
+   </property>
+  </action>
+  <action name="copy">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/copy.png</normaloff>:/File/images/copy.png</iconset>
+   </property>
+   <property name="text">
+    <string>复制</string>
+   </property>
+  </action>
+  <action name="Cutting">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/Cutting.png</normaloff>:/File/images/Cutting.png</iconset>
+   </property>
+   <property name="text">
+    <string>切割</string>
+   </property>
+  </action>
+  <action name="Property_superposition">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/Property superposition.png</normaloff>:/File/images/Property superposition.png</iconset>
+   </property>
+   <property name="text">
+    <string>属性叠加</string>
+   </property>
+  </action>
+  <action name="Unselected">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/Unselected.png</normaloff>:/File/images/Unselected.png</iconset>
+   </property>
+   <property name="text">
+    <string>反选</string>
+   </property>
+  </action>
+  <action name="saveProjectAs">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/Save as.png</normaloff>:/File/images/Save as.png</iconset>
+   </property>
+   <property name="text">
+    <string>工程另存为</string>
+   </property>
+  </action>
+  <action name="saveProject">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/save.png</normaloff>:/File/images/save.png</iconset>
+   </property>
+   <property name="text">
+    <string>保存工程(S)</string>
+   </property>
+  </action>
+  <action name="reduction">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/reduction.png</normaloff>:/File/images/reduction.png</iconset>
+   </property>
+   <property name="text">
+    <string>还原(O)</string>
+   </property>
+  </action>
+  <action name="whirl_alone">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/whirl（alone）.png</normaloff>:/File/images/whirl（alone）.png</iconset>
+   </property>
+   <property name="text">
+    <string>旋转物体</string>
+   </property>
+  </action>
+  <action name="whirl">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/whirl.png</normaloff>:/File/images/whirl.png</iconset>
+   </property>
+   <property name="text">
+    <string>旋转场景</string>
+   </property>
+  </action>
+  <action name="panoramic">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/panoramic.png</normaloff>:/File/images/panoramic.png</iconset>
+   </property>
+   <property name="text">
+    <string>全景</string>
+   </property>
+  </action>
+  <action name="Plan_view">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/Plan view.png</normaloff>:/File/images/Plan view.png</iconset>
+   </property>
+   <property name="text">
+    <string>俯视图</string>
+   </property>
+  </action>
+  <action name="Bottom_view">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/Bottom view.png</normaloff>:/File/images/Bottom view.png</iconset>
+   </property>
+   <property name="text">
+    <string>仰视图</string>
+   </property>
+  </action>
+  <action name="Parallel_projection">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/Parallel projection.png</normaloff>:/File/images/Parallel projection.png</iconset>
+   </property>
+   <property name="text">
+    <string>平行投影</string>
+   </property>
+  </action>
+  <action name="Perspective_projection">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/Perspective projection.png</normaloff>:/File/images/Perspective projection.png</iconset>
+   </property>
+   <property name="text">
+    <string>透视投影</string>
+   </property>
+  </action>
+  <action name="enlarge">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/enlarge.png</normaloff>:/File/images/enlarge.png</iconset>
+   </property>
+   <property name="text">
+    <string>放大</string>
+   </property>
+  </action>
+  <action name="Narrow">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/Narrow.png</normaloff>:/File/images/Narrow.png</iconset>
+   </property>
+   <property name="text">
+    <string>缩小</string>
+   </property>
+  </action>
+  <action name="Outsourcing_box">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/Outsourcing box.png</normaloff>:/File/images/Outsourcing box.png</iconset>
+   </property>
+   <property name="text">
+    <string>外包框</string>
+   </property>
+  </action>
+  <action name="XYZ">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/XYZ.png</normaloff>:/File/images/XYZ.png</iconset>
+   </property>
+   <property name="text">
+    <string>坐标轴</string>
+   </property>
+  </action>
+  <action name="Staff">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/Staff.png</normaloff>:/File/images/Staff.png</iconset>
+   </property>
+   <property name="text">
+    <string>标尺</string>
+   </property>
+  </action>
+  <action name="North_view">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/North view.png</normaloff>:/File/images/North view.png</iconset>
+   </property>
+   <property name="text">
+    <string>正北视图</string>
+   </property>
+  </action>
+  <action name="Wellhead">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/Wellhead.png</normaloff>:/File/images/Wellhead.png</iconset>
+   </property>
+   <property name="text">
+    <string>井头</string>
+   </property>
+  </action>
+  <action name="Well_trajectory">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/Well trajectory.png</normaloff>:/File/images/Well trajectory.png</iconset>
+   </property>
+   <property name="text">
+    <string>井轨迹</string>
+   </property>
+  </action>
+  <action name="Logs">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/Logs.png</normaloff>:/File/images/Logs.png</iconset>
+   </property>
+   <property name="text">
+    <string>测井曲线</string>
+   </property>
+  </action>
+  <action name="Perforation">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/Perforation.png</normaloff>:/File/images/Perforation.png</iconset>
+   </property>
+   <property name="text">
+    <string>射孔</string>
+   </property>
+  </action>
+  <action name="Stratified">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/Stratified.png</normaloff>:/File/images/Stratified.png</iconset>
+   </property>
+   <property name="text">
+    <string>分层</string>
+   </property>
+  </action>
+  <action name="Reservoir_Simulation">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/Reservoir Simulation.png</normaloff>:/File/images/Reservoir Simulation.png</iconset>
+   </property>
+   <property name="text">
+    <string>油藏模拟</string>
+   </property>
+  </action>
+  <action name="Geological_model">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/Geological model.png</normaloff>:/File/images/Geological model.png</iconset>
+   </property>
+   <property name="text">
+    <string>地质模型</string>
+   </property>
+  </action>
+  <action name="crack">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/crack.png</normaloff>:/File/images/crack.png</iconset>
+   </property>
+   <property name="text">
+    <string>裂缝</string>
+   </property>
+  </action>
+  <action name="color">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/color.png</normaloff>:/File/images/color.png</iconset>
+   </property>
+   <property name="text">
+    <string>背景色</string>
+   </property>
+  </action>
+  <action name="Hide_Show">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/Hide Show.png</normaloff>:/File/images/Hide Show.png</iconset>
+   </property>
+   <property name="text">
+    <string>隐藏显示</string>
+   </property>
+  </action>
+  <action name="move">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/move.png</normaloff>:/File/images/move.png</iconset>
+   </property>
+   <property name="text">
+    <string>移动</string>
+   </property>
+  </action>
+  <action name="Light_control">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/Light control.png</normaloff>:/File/images/Light control.png</iconset>
+   </property>
+   <property name="text">
+    <string>光源控制</string>
+   </property>
+  </action>
+  <action name="drilling">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/drilling.png</normaloff>:/File/images/drilling.png</iconset>
+   </property>
+   <property name="text">
+    <string>钻孔</string>
+   </property>
+  </action>
+  <action name="profile">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/profile.png</normaloff>:/File/images/profile.png</iconset>
+   </property>
+   <property name="text">
+    <string>剖面</string>
+   </property>
+  </action>
+  <action name="well_deviation">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/well deviation.png</normaloff>:/File/images/well deviation.png</iconset>
+   </property>
+   <property name="text">
+    <string>井斜</string>
+   </property>
+  </action>
+  <action name="straight_line">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/straight line.png</normaloff>:/File/images/straight line.png</iconset>
+   </property>
+   <property name="text">
+    <string>画线</string>
+   </property>
+  </action>
+  <action name="text_editor">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/text editor.png</normaloff>:/File/images/text editor.png</iconset>
+   </property>
+   <property name="text">
+    <string>文字编辑</string>
+   </property>
+  </action>
+  <action name="Draw_boundary">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/Draw boundary.png</normaloff>:/File/images/Draw boundary.png</iconset>
+   </property>
+   <property name="text">
+    <string>绘制边界</string>
+   </property>
+  </action>
+  <action name="Generate_contours">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/Generate contours.png</normaloff>:/File/images/Generate contours.png</iconset>
+   </property>
+   <property name="text">
+    <string>生成等值线</string>
+   </property>
+  </action>
+  <action name="layer">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/layer.png</normaloff>:/File/images/layer.png</iconset>
+   </property>
+   <property name="text">
+    <string>图层管理</string>
+   </property>
+  </action>
+  <action name="Structural_map">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/Structural map.png</normaloff>:/File/images/Structural map.png</iconset>
+   </property>
+   <property name="text">
+    <string>构造图</string>
+   </property>
+  </action>
+  <action name="Thematic_map">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/Thematic map.png</normaloff>:/File/images/Thematic map.png</iconset>
+   </property>
+   <property name="text">
+    <string>专题图</string>
+   </property>
+  </action>
+  <action name="point">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/point.png</normaloff>:/File/images/point.png</iconset>
+   </property>
+   <property name="text">
+    <string>点</string>
+   </property>
+  </action>
+  <action name="line">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/line.png</normaloff>:/File/images/line.png</iconset>
+   </property>
+   <property name="text">
+    <string>线</string>
+   </property>
+  </action>
+  <action name="surface">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/surface.png</normaloff>:/File/images/surface.png</iconset>
+   </property>
+   <property name="text">
+    <string>面</string>
+   </property>
+  </action>
+  <action name="body_part">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/body part.png</normaloff>:/File/images/body part.png</iconset>
+   </property>
+   <property name="text">
+    <string>体</string>
+   </property>
+  </action>
+  <action name="Sphere">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/Sphere.png</normaloff>:/File/images/Sphere.png</iconset>
+   </property>
+   <property name="text">
+    <string>球体</string>
+   </property>
+  </action>
+  <action name="cuboid">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/cuboid.png</normaloff>:/File/images/cuboid.png</iconset>
+   </property>
+   <property name="text">
+    <string>长方体</string>
+   </property>
+  </action>
+  <action name="Ellipsoid">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/Ellipsoid.png</normaloff>:/File/images/Ellipsoid.png</iconset>
+   </property>
+   <property name="text">
+    <string>椭球体</string>
+   </property>
+  </action>
+  <action name="Cone">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/Cone.png</normaloff>:/File/images/Cone.png</iconset>
+   </property>
+   <property name="text">
+    <string>圆锥体</string>
+   </property>
+  </action>
+  <action name="Cylinder">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/Cylinder.png</normaloff>:/File/images/Cylinder.png</iconset>
+   </property>
+   <property name="text">
+    <string>圆柱体</string>
+   </property>
+  </action>
+  <action name="Yuantong">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/Yuantong.png</normaloff>:/File/images/Yuantong.png</iconset>
+   </property>
+   <property name="text">
+    <string>圆筒</string>
+   </property>
+  </action>
+  <action name="Ring">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/File/images/Ring.png</normaloff>:/File/images/Ring.png</iconset>
+   </property>
+   <property name="text">
+    <string>圆环</string>
+   </property>
+  </action>
+  <action name="AssistantView">
+   <property name="text">
+    <string>辅助界面</string>
+   </property>
+  </action>
+  <action name="loadStrataSurface">
+   <property name="text">
+    <string>地层面</string>
+   </property>
+   <property name="toolTip">
+    <string>加载地层面数据</string>
+   </property>
+  </action>
+  <action name="loadFault">
+   <property name="text">
+    <string>断层面</string>
+   </property>
+   <property name="toolTip">
+    <string>加载断层面数据</string>
+   </property>
+  </action>
+  <action name="loadWell">
+   <property name="text">
+    <string>井</string>
+   </property>
+   <property name="toolTip">
+    <string>加载井数据</string>
+   </property>
+  </action>
+  <action name="loadSModel">
+   <property name="text">
+    <string>地层模型（表面）</string>
+   </property>
+   <property name="toolTip">
+    <string>加载表面模型数据</string>
+   </property>
+  </action>
+  <action name="loadVModel">
+   <property name="text">
+    <string>地层模型（体元）</string>
+   </property>
+   <property name="toolTip">
+    <string>加载体元模型数据</string>
+   </property>
+  </action>
+  <action name="loadExplorationResult">
+   <property name="text">
+    <string>勘探成果图</string>
+   </property>
+   <property name="toolTip">
+    <string>加载勘探成果图</string>
+   </property>
+  </action>
+  <action name="loadProfile">
+   <property name="text">
+    <string>连井剖面图</string>
+   </property>
+   <property name="toolTip">
+    <string>加载连井剖面图</string>
+   </property>
+  </action>
+  <action name="loadCompositeColumn">
+   <property name="text">
+    <string>单井综合柱状图</string>
+   </property>
+   <property name="toolTip">
+    <string>加载单井综合柱状图</string>
+   </property>
+  </action>
+  <action name="saveProjectAS">
+   <property name="text">
+    <string>另存工程</string>
+   </property>
+   <property name="toolTip">
+    <string>工程另存为...</string>
+   </property>
+  </action>
+  <action name="quit">
+   <property name="text">
+    <string>退出</string>
+   </property>
+  </action>
+  <action name="ExplorationResultDataTransForm">
+   <property name="text">
+    <string>勘探成果图计算</string>
+   </property>
+  </action>
+  <action name="ProfileDataTransform">
+   <property name="text">
+    <string>连井剖面图计算</string>
+   </property>
+  </action>
+  <action name="SinglewellDataTransform">
+   <property name="text">
+    <string>综合柱状图计算</string>
+   </property>
+  </action>
+  <action name="DataTransform">
+   <property name="text">
+    <string>数据校正</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>GraphicsView</class>
+   <extends>QGraphicsView</extends>
+   <header location="global">graphicsview.h</header>
+  </customwidget>
+  <customwidget>
+   <class>TreeView</class>
+   <extends>QTreeView</extends>
+   <header location="global">treeview.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>
